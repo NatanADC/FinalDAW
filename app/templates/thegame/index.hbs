@@ -1,0 +1,19 @@
+
+<!--<h1>Juegos Disponibles </h1>
+<Gametoplay @games={{model.games}} @users={{model.users}} @handleJoin={{this.onJoin}}
+@handleSubmit={{this.onSubmit}}/>-->
+
+<h1>The game {{this.model.game.code}}</h1>
+<button class="boton_personalizado"  >
+  <LinkTo
+    @route="thegame.index"
+  >
+    Return
+  </LinkTo>
+</button>
+
+
+
+
+
+<Player @play={{this.model.play}}/>

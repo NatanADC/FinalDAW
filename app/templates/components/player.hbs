@@ -1,0 +1,14 @@
+{{log this.user_global.user}}
+{{#each @plays as |play|}}
+  {{action this.setUser  play.user_id}}
+
+{{log this.user_info.username}}
+  <div class="perfilTweet">
+
+
+    <p class="textobold">Nombre del usuario: {{play.user_id}}</p>
+    <p class="textobold">GAME {{play.game_id}}</p>
+
+  </div>
+
+{{/each}}

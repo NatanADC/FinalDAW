@@ -1,0 +1,64 @@
+Select User:
+{{log this.games}}
+<select class="caja" onChange={{action this.onChange value="target.value"}}>
+  {{#each @users as |user|}}
+		<option value={{user.id}}>{{user.username}}</option>
+	{{/each}}
+</select>
+
+<button class="boton_personalizado"  {{action this.onSubmit}}>
+	Add game
+</button>
+<button><LinkTo
+					@route="thegame.ingame"
+					@model={{game.id}}
+				>
+					Play!
+				</LinkTo>
+</button>
+
+<div class="tbl-header">
+
+<table cellpadding="0" cellspacing="0" border="0">
+	<thead>
+	<tr>
+		<th>Codigo</th>
+		<th>Status</th>
+		<th>Jugadores</th>
+		<th>Join</th>
+		<th>Play</th>
+	</tr>
+	</thead>
+
+</table>
+
+</div>
+
+<div class="tbl-content">
+	<table cellpadding="0" cellspacing="0" border="0">
+
+		  {{log this.user_global.user}}
+	{{#each @games as |game|}}
+		<tr>
+      {{log game.statusLetra}}
+			<th>{{game.code}}</th>
+			<th>{{game.statusLetra}}</th>
+			<th>{{game.total_users}}</th>
+			<th><button id="play" disabled={{if (gte game.total_users 2 ) "true"}} {{action this.onJoin  game.id}}>
+        Join! {{game.id}}
+			</button></th>
+			<th>
+
+				<LinkTo
+					@route="thegame.ingame"
+					@model={{game.id}}
+				>
+					Play!
+				</LinkTo>
+
+			</th>
+
+		</tr>
+	{{/each}}
+	</table>
+</div>
