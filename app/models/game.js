@@ -2,11 +2,11 @@ import DS from 'ember-data';
 const { Model, attr , hasMany} = DS;
 
 export default class GameModel extends Model {
-	@attr("string")   code;
-	@attr("string")   status;
-	@attr("string")   total_users;
-	@attr("string")   winner_name;
-	@hasMany('plays')	plays;
+	@attr('string') code;
+	@attr('number') status;
+	@attr('number') totalUsers;
+	@attr('string') winnerName;
+	@attr('string') winnerId;
 
 	get statusLetra() {
 		let statusString='';

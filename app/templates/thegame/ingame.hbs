@@ -1,15 +1,12 @@
-<button id="newGame" >
+<h1>The game {{this.model.game.code}}</h1>
+<button class="boton_personalizado"  >
   <LinkTo
     @route="thegame.index"
   >
-    EXIT
+    Return
   </LinkTo>
 </button>
-<!-- {{log this.model.game}} -->
-<p>Código: {{this.model.game.code}}</p>
-<p>Estatus: {{this.model.game.statusLetra}}</p>
-<p>Jugadores: {{this.model.game.total_users}}</p>
-<p>Ganador: </p>
+
 
 
 
