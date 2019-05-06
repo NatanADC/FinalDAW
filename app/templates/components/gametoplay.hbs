@@ -1,10 +1,10 @@
 Select User:
-<!--{{log this.games}}
+{{log this.games}}
 <select class="caja" onChange={{action this.onChange value="target.value"}}>
   {{#each @users as |user|}}
 		<option value={{user.id}}>{{user.username}}</option>
 	{{/each}}
-</select>-->
+</select>
 
 <button class="boton_personalizado"  {{action this.onSubmit}}>
 	Add game
